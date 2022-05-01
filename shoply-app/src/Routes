@@ -1,0 +1,36 @@
+import React, { useState,
+    useEffect} from 'react';
+import {
+  Switch,
+  Route,
+  Redirect,
+  BrowserRouter
+ 
+} from 'react-router-dom';
+import ProductDetails from './ProductDetail'
+import ItemList from './ItemList';
+import ShoppingCart from './ShoppingCart'
+
+
+
+
+function Routes() {
+ 
+
+
+    return (
+        <BrowserRouter>
+          <Switch>
+          <Route exact path="/">
+            <ItemList/>
+    <ShoppingCart/>
+            </Route>
+            <Route exact path="/product">
+              <ProductDetails/>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      );
+    }
+
+export default Routes;
